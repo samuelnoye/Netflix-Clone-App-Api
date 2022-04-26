@@ -30,14 +30,22 @@ static let identifier = "CollectionViewTableViewCell"
     required init?(coder: NSCoder) {
         fatalError()
     }
- 
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        collectionView.frame = contentView.bounds
+//    }
 }
 
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cel", for: indexPath)
-        
+        cell.backgroundColor = .green
         return cell
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        10
     }
     
     
