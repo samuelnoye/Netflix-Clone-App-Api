@@ -30,10 +30,11 @@ static let identifier = "CollectionViewTableViewCell"
     required init?(coder: NSCoder) {
         fatalError()
     }
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        collectionView.frame = contentView.bounds
-//    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+       // collectionView.frame = contentView.bounds
+    }
 }
 
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
